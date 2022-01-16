@@ -1,2 +1,33 @@
+#theme oh my posh
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme night-owl
+
+# Shows navigable menu of all options when hitting Tab
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+# PowerShell parameter completion shim for the dotnet CLI
+Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
+    param($commandName, $wordToComplete, $cursorPosition)
+        dotnet complete --position $cursorPosition "$wordToComplete" | ForEach-Object {
+           [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        }
+}
+
+#Aliases
+set-alias ls lsd
+set-alias .. cd..
+set-alias vi vim 
+set-alias exp explorer
+set-alias neofetch winfetch
+
+#functions
+function l {lsd -A --extensionsort --group-dirs first}
+function lx {lsd -X --extensionsort --group-dirs first}
+function li {lsd -i --extensionsort --group-dirs first}
+function la {lsd -l --extensionsort --group-dirs first}
+
+function ... {cd ../..}
+function ~ {cd ~}
+
+function up {winget upgrade}
+function list {winget list}
