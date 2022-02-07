@@ -20,3 +20,4 @@ This is my windows terminal setup, it works with 🪟 windows 10 and 11
 
 - [@rodrigo](https://www.github.com/shapzo) 😘
 
+<img src="https://avatars.githubusercontent.com/u/85635398?v=4" height="200" alt="Logo">
