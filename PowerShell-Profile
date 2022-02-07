@@ -33,3 +33,10 @@ function up {winget upgrade}
 function list {winget list}
 
 #git functions
+function status {git status}
+function add {git add .}
+function push {git push origin main}
+function pull {git pull}
+
+#function prototype to open projects you are working on
+function wt {cd C:\Users\you-user\Workspace\ && code .}
