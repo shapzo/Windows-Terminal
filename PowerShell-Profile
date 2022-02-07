@@ -31,3 +31,5 @@ function ... {cd ../..}
 
 function up {winget upgrade}
 function list {winget list}
+
+#git functions
