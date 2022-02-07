@@ -39,4 +39,4 @@ function push {git push origin main}
 function pull {git pull}
 
 #function prototype to open projects you are working on
-function wt {cd C:\Users\you-user\Workspace\ && code .}
+function wt {cd C:\Users\you-user\Workspace\ && vim .}
