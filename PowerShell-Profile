@@ -18,7 +18,7 @@ set-alias ls lsd
 set-alias .. cd..
 set-alias vi vim 
 set-alias exp explorer
-set-alias neofetch winfetch
+set-alias nf winfetch
 
 #functions
 function l {lsd -A --extensionsort --group-dirs first}
@@ -26,8 +26,8 @@ function lx {lsd -X --extensionsort --group-dirs first}
 function li {lsd -i --extensionsort --group-dirs first}
 function la {lsd -l --extensionsort --group-dirs first}
 
-function ... {cd ../..}
 function ~ {cd ~}
+function ... {cd ../..}
 
 function up {winget upgrade}
 function list {winget list}
